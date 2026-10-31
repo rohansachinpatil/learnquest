@@ -1,64 +1,96 @@
-# LearnQuest
+# LearnQuest — YouTube Learning Chrome Extension
 
-LearnQuest is a Chrome extension that turns YouTube lectures and playlists into a focused learning path. It adds a topic timeline, a course journey, and a small motivation system without replacing the YouTube player.
+**A Chrome extension for YouTube lecture and playlist study, with topic timelines, learning maps, and daily study goals.**
 
-> The screenshots below show the real LearnQuest interface with a local sample playlist. The sample titles and progress are demonstration data, not claims about a real lecture.
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](manifest.json)
+[![Manifest V3](https://img.shields.io/badge/Manifest-V3-34A853?style=for-the-badge&logo=googlechrome&logoColor=white)](manifest.json)
+[![GitHub stars](https://img.shields.io/github/stars/rohansachinpatil/learnquest?style=for-the-badge&logo=github)](https://github.com/rohansachinpatil/learnquest/stargazers)
+
+LearnQuest is a YouTube study companion for students who want to follow educational videos without leaving the YouTube player. It adds a clickable lecture timeline, a course learning map, playlist progress tracking, transcript import, and gamified daily study goals.
+
+> Screenshots use a local sample playlist to demonstrate the interface. Their titles and progress are example data, not claims about a real lecture.
 
 ## Screenshots
 
-### Today: daily goal, checkpoints, XP, and achievements
+### Daily study goal, checkpoints, XP, and achievements
 
-![LearnQuest Today dashboard](docs/screenshots/today-dashboard.png)
+![LearnQuest YouTube study dashboard with daily lecture goal, checkpoints, XP, streak, and achievements](docs/screenshots/today-dashboard.png)
 
-### Course: playlist progress and the next lecture
+### YouTube playlist course progress and next lecture
 
-![LearnQuest course journey](docs/screenshots/course-journey.png)
+![LearnQuest course journey showing completed, current, and upcoming playlist lectures](docs/screenshots/course-journey.png)
 
-## Download and install
+## Install the Chrome extension
 
-### Download ZIP
+LearnQuest is a ready-to-load Manifest V3 extension. It needs no account, API key, or build step.
 
-1. Open the [LearnQuest GitHub repository](https://github.com/rohansachinpatil/learnquest).
-2. Choose **Code → Download ZIP**, then extract the archive.
-3. In Chrome, open `chrome://extensions` and turn on **Developer mode**.
-4. Choose **Load unpacked** and select the extracted LearnQuest folder—the one containing `manifest.json` and `content.js`.
-5. Open or refresh a YouTube video. The LearnQuest button appears at the lower-right of the page.
+1. [Download the latest source as a ZIP](https://github.com/rohansachinpatil/learnquest/archive/refs/heads/main.zip) and extract it, or clone the repository:
 
-### Clone with Git
+   ```bash
+   git clone https://github.com/rohansachinpatil/learnquest.git
+   ```
 
-```bash
-git clone https://github.com/rohansachinpatil/learnquest.git
-```
+2. In Chrome, open `chrome://extensions` and enable **Developer mode**.
+3. Select **Load unpacked** and choose the extracted `learnquest` folder containing `manifest.json` and `content.js`.
+4. Open or refresh a YouTube lecture. Select the floating **LearnQuest** button near the lower-right of the page.
 
-Then load the cloned folder through `chrome://extensions` → **Developer mode** → **Load unpacked**.
+## Features for YouTube study
 
-This folder contains the ready-to-load Manifest V3 extension; no build or API key is required.
+- **Lecture timeline:** Jump to YouTube chapters, timestamped description entries, or topics from a transcript.
+- **Learning map:** Explore lecture topics alongside the course playlist and see which topics are learned, current, or upcoming when source data supports it.
+- **YouTube playlist tracker:** View available playlist lectures, current and next videos, and saved viewing progress.
+- **Transcript import:** Build a more detailed timeline from an `.srt`, `.vtt`, or timestamped text transcript you provide.
+- **Daily study goals:** Choose a target of 1–8 completed lectures and follow visual checkpoints during your study session.
+- **XP and achievements:** Earn 25 XP for a completed lecture, progress through 100-XP levels, and unlock milestones from recorded study activity.
+- **Local progress tracking:** Keep lecture, playlist, goal, and achievement data in this browser using `chrome.storage.local`.
 
-## Use LearnQuest
+## Set a daily lecture goal
 
-1. Open a YouTube lecture or a video in a playlist.
-2. Select the floating **LearnQuest** button on the video page.
-3. In **Today**, use the `−` / `+` controls to set a goal of 1–8 completed lectures.
-4. Watch normally. Each checkpoint completes only when LearnQuest records a lecture as completed (at least 90% watched, or the video ends); seeking over a section alone does not count.
-5. Earn 25 XP for a completed lecture. Levels advance in 100 XP steps. Achievements unlock from recorded completions and study days.
-6. Use **Timeline**, **Map**, and **Course** to revisit topics, jump to timestamps, and continue to the next available playlist video.
+1. Open **Today** in the LearnQuest panel.
+2. Use `−` and `+` to set how many lectures you want to complete today.
+3. Watch normally. LearnQuest counts a lecture after at least 90% of its duration is watched, or when the video ends. Seeking past a lecture by itself does not count.
+4. Follow the checkpoints and see your goal progress, XP, and achievements update.
 
-Daily goals, XP, achievements, playlist progress, and viewing history are stored locally by Chrome. Streaks are informational—there are no penalties for taking a break. The extension does not send transcripts or browsing history to a backend.
+Streaks are informational. There is no penalty for taking a break, and you can change your goal at any time.
 
-## Transcript and playlist notes
+## How the YouTube timeline and transcript work
 
-- LearnQuest uses visible YouTube chapters and timestamped description entries when available.
-- Captions are observed while they are visible during playback. Caption availability depends on the video and the learner's caption settings.
-- If a detailed timeline is unavailable, use **Transcript** to import an `.srt`, `.vtt`, or timestamped text file. LearnQuest does not fetch transcripts from an unofficial endpoint.
-- Playlist entries are read from the playlist information rendered on the current YouTube page. Private, unavailable, or not-yet-rendered entries may be missing.
-- The extension works on YouTube pages; it does not add a separate video player.
+LearnQuest uses available YouTube chapters and timestamped description entries first. It can also observe captions while they are visible during playback. If a video has no usable topic data, import your own `.srt`, `.vtt`, or timestamped text file from **Transcript**.
 
-## Troubleshooting
-
-- If the LearnQuest button is missing, confirm the extension is enabled and you're on `https://www.youtube.com/`, then refresh the page.
-- If a playlist is not detected, open a video from the playlist or open its playlist page and allow YouTube's playlist entries to load.
-- If no topics appear, check for chapters, turn on available captions while watching, or import a timestamped transcript.
+LearnQuest does not download transcripts from unofficial YouTube endpoints. Caption and chapter availability varies by video, and playlist entries may be missing when videos are private, unavailable, or not yet rendered on the page.
 
 ## Privacy
 
-LearnQuest uses the minimum `storage` permission and runs on YouTube pages. Learning records are saved in `chrome.storage.local` on this browser. No account, external AI service, or API key is needed.
+LearnQuest runs on YouTube pages and requests the `storage` permission for local learning progress. It does not require registration, send transcripts to an AI service, or transmit browsing history to a backend.
+
+## Troubleshooting
+
+- **LearnQuest button is missing:** Check that the extension is enabled, open `https://www.youtube.com/`, and refresh the page.
+- **Playlist is not detected:** Open a video from the playlist and wait for YouTube's playlist entries to load.
+- **No topic timeline appears:** Check for chapters, enable available captions while watching, or import a timestamped transcript.
+
+## Questions
+
+**Does LearnQuest replace the YouTube player or interrupt playback?**
+
+No. LearnQuest adds a small in-page panel; YouTube remains the video player.
+
+**Does LearnQuest automatically fetch every transcript?**
+
+No. Transcript availability depends on the video. Use visible chapters or captions when available, or import a transcript file you already have.
+
+**Does LearnQuest use an AI backend?**
+
+No. This MVP uses available page information and deterministic processing. No AI API key or external service is required.
+
+**Where is my study progress saved?**
+
+In Chrome's local extension storage on this browser. It is not synced to an account.
+
+## Report an issue
+
+If something does not work, [open a GitHub issue](https://github.com/rohansachinpatil/learnquest/issues) with the Chrome version, the page type (video or playlist), and steps to reproduce. Do not include private account information.
+
+## License
+
+This repository does not currently include a license file. Contact the repository owner before redistributing or reusing the code.
