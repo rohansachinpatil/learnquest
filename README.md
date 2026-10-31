@@ -13,14 +13,14 @@ LearnQuest is a YouTube study companion for students who want to follow educatio
 
 You do not need to use a terminal, install programming tools, or build the extension. You only need Google Chrome and the downloaded LearnQuest folder.
 
-1. **Download LearnQuest:** [Download the ZIP file](https://github.com/rohansachinpatil/learnquest/archive/refs/heads/main.zip). Save it to your computer.
+1. **Download LearnQuest:** [Download the ready-to-load v0.1.0 extension ZIP](https://raw.githubusercontent.com/rohansachinpatil/learnquest/main/releases/learnquest-v0.1.0.zip). Save it to your computer. The package includes the extension files and license.
 2. **Unzip the download:**
    - **Windows:** Open your Downloads folder, right-click the ZIP file, choose **Extract All**, then choose **Extract**.
    - **Mac:** Open your Downloads folder and double-click the ZIP file.
    - **Other computers:** Use the computer's built-in archive tool to extract the ZIP.
 3. **Open Chrome's extensions page:** Type `chrome://extensions` in Chrome's address bar and press Enter.
 4. **Turn on Developer mode:** Find the **Developer mode** switch near the top-right of the page and turn it on.
-5. **Load LearnQuest:** Select **Load unpacked**. In the folder picker, open the extracted `learnquest-main` folder and select the folder that directly contains `manifest.json` and `content.js`. Then click **Select Folder** (or **Open**, depending on your computer).
+5. **Load LearnQuest:** Select **Load unpacked**. In the folder picker, open the folder created when you extracted the ZIP and select the folder that directly contains `manifest.json` and `content.js`. Then click **Select Folder** (or **Open**, depending on your computer).
 6. **Finish:** Leave the extension enabled, open or refresh a YouTube lecture, and look for the floating **LearnQuest** button near the lower-right of the video page.
 
 > **Why Developer mode?** LearnQuest is currently installed from this GitHub download rather than the Chrome Web Store. Chrome may show a Developer mode notice; this is expected for a manually installed extension.
@@ -28,6 +28,14 @@ You do not need to use a terminal, install programming tools, or build the exten
 ### If Chrome cannot load the folder
 
 You may have selected the ZIP file or the wrong folder. Go back to **Load unpacked** and select the extracted folder where `manifest.json` is visible. Do not select the `docs` or `screenshots` folder.
+
+## Releases and version
+
+### v0.1.0 — Current package
+
+[Download the ready-to-load Chrome extension ZIP](https://raw.githubusercontent.com/rohansachinpatil/learnquest/main/releases/learnquest-v0.1.0.zip). It contains `manifest.json`, `content.js`, and the MIT `LICENSE` at the ZIP root. Extract it, then follow the **Load unpacked** steps above.
+
+This package includes the YouTube lecture timeline, learning map, playlist progress, transcript import, daily goals, checkpoints, XP, and achievements. Future versioned packages and release notes will be listed here and on the [GitHub Releases page](https://github.com/rohansachinpatil/learnquest/releases).
 
 > Screenshots use a local sample playlist to demonstrate the interface. Their titles and progress are example data, not claims about a real lecture.
 
