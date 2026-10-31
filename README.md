@@ -5,6 +5,7 @@
 [![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](manifest.json)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-34A853?style=for-the-badge&logo=googlechrome&logoColor=white)](manifest.json)
 [![GitHub stars](https://img.shields.io/github/stars/rohansachinpatil/learnquest?style=for-the-badge&logo=github)](https://github.com/rohansachinpatil/learnquest/stargazers)
+[![License: MIT](https://img.shields.io/github/license/rohansachinpatil/learnquest?style=for-the-badge)](LICENSE)
 
 LearnQuest is a YouTube study companion for students who want to follow educational videos without leaving the YouTube player. It adds a clickable lecture timeline, a course learning map, playlist progress tracking, transcript import, and gamified daily study goals.
 
@@ -115,4 +116,8 @@ If something does not work, [open a GitHub issue](https://github.com/rohansachin
 
 ## License
 
-This repository does not currently include a license file. Contact the repository owner before redistributing or reusing the code.
+LearnQuest is licensed under the [MIT License](LICENSE).
+
+---
+
+<p align="center">Developed by <a href="https://www.linkedin.com/in/rohansachinpatil/">Rohan Patil</a> · Licensed under MIT</p>
