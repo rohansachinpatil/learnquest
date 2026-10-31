@@ -12,13 +12,20 @@ LearnQuest is a YouTube study companion for students who want to follow educatio
 
 ## Screenshots
 
-### Daily study goal, checkpoints, XP, and achievements
+<table>
+  <tr>
+    <td align="center">
+      <a href="docs/screenshots/today-dashboard.png"><img src="docs/screenshots/today-dashboard.png" width="260" alt="LearnQuest daily study goal, checkpoints, XP, and achievements" /></a><br />
+      <sub><strong>Today</strong> · Daily goal and achievements</sub>
+    </td>
+    <td align="center">
+      <a href="docs/screenshots/course-journey.png"><img src="docs/screenshots/course-journey.png" width="260" alt="LearnQuest playlist course progress and next lecture" /></a><br />
+      <sub><strong>Course</strong> · Playlist progress and next lecture</sub>
+    </td>
+  </tr>
+</table>
 
-![LearnQuest YouTube study dashboard with daily lecture goal, checkpoints, XP, streak, and achievements](docs/screenshots/today-dashboard.png)
-
-### YouTube playlist course progress and next lecture
-
-![LearnQuest course journey showing completed, current, and upcoming playlist lectures](docs/screenshots/course-journey.png)
+<p align="center"><sub>Select a screenshot to view it at full size.</sub></p>
 
 ## Install the Chrome extension
 
