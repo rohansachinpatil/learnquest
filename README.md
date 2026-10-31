@@ -8,6 +8,26 @@
 
 LearnQuest is a YouTube study companion for students who want to follow educational videos without leaving the YouTube player. It adds a clickable lecture timeline, a course learning map, playlist progress tracking, transcript import, and gamified daily study goals.
 
+## Install in Chrome (no coding required)
+
+You do not need to use a terminal, install programming tools, or build the extension. You only need Google Chrome and the downloaded LearnQuest folder.
+
+1. **Download LearnQuest:** [Download the ZIP file](https://github.com/rohansachinpatil/learnquest/archive/refs/heads/main.zip). Save it to your computer.
+2. **Unzip the download:**
+   - **Windows:** Open your Downloads folder, right-click the ZIP file, choose **Extract All**, then choose **Extract**.
+   - **Mac:** Open your Downloads folder and double-click the ZIP file.
+   - **Other computers:** Use the computer's built-in archive tool to extract the ZIP.
+3. **Open Chrome's extensions page:** Type `chrome://extensions` in Chrome's address bar and press Enter.
+4. **Turn on Developer mode:** Find the **Developer mode** switch near the top-right of the page and turn it on.
+5. **Load LearnQuest:** Select **Load unpacked**. In the folder picker, open the extracted `learnquest-main` folder and select the folder that directly contains `manifest.json` and `content.js`. Then click **Select Folder** (or **Open**, depending on your computer).
+6. **Finish:** Leave the extension enabled, open or refresh a YouTube lecture, and look for the floating **LearnQuest** button near the lower-right of the video page.
+
+> **Why Developer mode?** LearnQuest is currently installed from this GitHub download rather than the Chrome Web Store. Chrome may show a Developer mode notice; this is expected for a manually installed extension.
+
+### If Chrome cannot load the folder
+
+You may have selected the ZIP file or the wrong folder. Go back to **Load unpacked** and select the extracted folder where `manifest.json` is visible. Do not select the `docs` or `screenshots` folder.
+
 > Screenshots use a local sample playlist to demonstrate the interface. Their titles and progress are example data, not claims about a real lecture.
 
 ## Screenshots
@@ -27,19 +47,14 @@ LearnQuest is a YouTube study companion for students who want to follow educatio
 
 <p align="center"><sub>Select a screenshot to view it at full size.</sub></p>
 
-## Install the Chrome extension
+## Start studying on YouTube
 
-LearnQuest is a ready-to-load Manifest V3 extension. It needs no account, API key, or build step.
+1. Open a YouTube lecture or a video in a playlist.
+2. Select the floating **LearnQuest** button near the lower-right of the YouTube page.
+3. Open **Today** and use `−` or `+` to set how many lectures you want to complete today.
+4. Watch as usual. LearnQuest saves your progress and updates checkpoints as lectures are completed.
 
-1. [Download the latest source as a ZIP](https://github.com/rohansachinpatil/learnquest/archive/refs/heads/main.zip) and extract it, or clone the repository:
-
-   ```bash
-   git clone https://github.com/rohansachinpatil/learnquest.git
-   ```
-
-2. In Chrome, open `chrome://extensions` and enable **Developer mode**.
-3. Select **Load unpacked** and choose the extracted `learnquest` folder containing `manifest.json` and `content.js`.
-4. Open or refresh a YouTube lecture. Select the floating **LearnQuest** button near the lower-right of the page.
+Use **Timeline** to jump to a topic, **Map** to explore the learning path, and **Course** to see playlist progress and the next lecture.
 
 ## Features for YouTube study
 
